@@ -1,128 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEKMARA SOLUTIONS</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TEKMARA SOLUTIONS — Build. Scale. Automate.</title>
+  <meta name="description" content="TEKMARA SOLUTIONS builds scalable products, APIs, websites, SaaS, QA and cloud-native deployments with a security-first approach." />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    header {
-      background: #1b5e20; /* dark green */
-      color: white;
-      padding: 20px 40px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.2rem;
-    }
-    nav {
-      background: #2e7d32; /* medium green */
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #1b5e20; /* dark green */
-    }
-    footer {
-      background: #1b5e20; /* dark green */
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
+    :root{--accent:#16a34a;--dark:#0b1220;--muted:#6b7280;--card:#ffffff;--bg:#f7fafc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--dark);background:var(--bg);line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+    header{background:linear-gradient(90deg,rgba(22,163,74,0.08),transparent);backdrop-filter: blur(6px)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:44px;height:44px;border-radius:8px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    .logo .text strong{font-size:24px}
+    ul.menu{list-style:none;display:flex;gap:20px;margin:0;padding:0}
+    ul.menu li a{font-size:18px;font-weight:600}
+    a{color:inherit;text-decoration:none}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:48px 0}
+    .h-eyebrow{color:var(--muted);font-weight:600;font-size:16px}
+    h1{font-size:44px;margin:8px 0}
+    h2{font-size:32px;margin-top:0}
+    h3{font-size:22px}
+    p.lead{color:var(--muted);margin:12px 0 20px;font-size:18px}
+    .cta{display:inline-flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid #e6eefc;color:var(--accent)}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(11,18,32,0.06)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .service h3{margin:10px 0}
+    .why{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:36px 0}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    footer{padding:36px 0;color:var(--muted);font-size:14px}
+    .footer-grid{display:flex;justify-content:space-between;gap:20px}
+    .contact-form input,.contact-form textarea{width:100%;padding:10px;margin-bottom:10px;border:1px solid #e6e9ef;border-radius:8px}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.services{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr}.container{padding:20px}}
+    @media (max-width:520px){.services{grid-template-columns:1fr}.logo .text{display:none}.menu{display:none}}
   </style>
 </head>
 <body>
   <header>
-    <h1>TEKMARA SOLUTIONS</h1>
-    <p>Innovative IT Consultancy for Web, APIs & SaaS</p>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <div class="mark">T</div>
+          <div class="text">
+            <strong>TEKMARA SOLUTIONS</strong>
+            <div class="small">Build. Scale. Automate.</div>
+          </div>
+        </div>
+        <ul class="menu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="h-eyebrow">Next‑generation IT consultancy</div>
+        <h1>Turn ideas into scalable products, APIs, SaaS and automation</h1>
+        <p class="lead">We help startups, SMEs, and enterprises build subscription-ready digital products with a security-first, API-first approach — from design to deployment.</p>
+        <div class="cta">
+          <button class="btn">Get a free consultation</button>
+          <a class="btn secondary" href="#contact">Request a quote</a>
+        </div>
 
-  <div class="container" id="about">
-    <h2>About Us</h2>
-    <p>
-      At TEKMARA SOLUTIONS, we specialize in building scalable, secure, and high-performing IT solutions. 
-      From web application development to API integration and SaaS platforms, we deliver technology that powers businesses.
-    </p>
-  </div>
+        <div class="card" style="margin-top:22px">
+          <strong>Core capabilities</strong>
+          <div style="margin-top:10px" class="small">Python development · API-first architectures · Web & SaaS · QA & testing · Cloud-native deployment</div>
+        </div>
+      </div>
 
-  <div class="container" id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>Modern, responsive websites tailored for your business needs.</p>
-      </div>
-      <div class="card">
-        <h3>REST API Solutions</h3>
-        <p>Design and integration of scalable APIs for seamless communication.</p>
-      </div>
-      <div class="card">
-        <h3>SaaS Applications</h3>
-        <p>End-to-end SaaS platforms that empower businesses with cloud solutions.</p>
-      </div>
-      <div class="card">
-        <h3>QA & Automation</h3>
-        <p>Reliable testing and automation services to ensure quality delivery.</p>
-      </div>
-      <div class="card">
-        <h3>Web Scraping</h3>
-        <p>Efficient data extraction services to help businesses make informed decisions.</p>
-      </div>
-    </div>
-  </div>
+      <aside>
+        <div class="card">
+          <h3>Ready for scale</h3>
+          <p class="small">Subscription-ready architectures, monetizable APIs, and automated deployments on AWS, Azure, or GCP.</p>
+          <ul style="margin-top:12px">
+            <li>API-as-a-Service design & monetization</li>
+            <li>Automated CI/CD & observability</li>
+            <li>Security-first implementation</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
 
-<div class="container" id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:infotekmara@gmail.com">infotekmara@gmail.com</a></p>
-  <p>Phone: +91-xxxxxx</p>
-  <p>Location: Bangalore, India</p>
-</div>
+    <section id="services">
+      <h2>Our Services</h2>
+      <p class="small">A full stack of services to design, build, test, and operate modern digital products.</p>
+
+      <div class="services">
+        <div class="card service">
+          <h3>Website Design & Development</h3>
+          <p class="small">Modern, responsive websites with excellent UX, accessibility and performance optimization.</p>
+        </div>
+
+        <div class="card service">
+          <h3>API-as-a-Service</h3>
+          <p class="small">REST APIs designed for monetization, secure integrations and high availability.</p>
+        </div>
+
+        <div class="card service">
+          <h3>QA & Testing Services</h3>
+          <p class="small">Functional, automation, performance and security testing to ensure reliability.</p>
+        </div>
+
+        <div class="card service">
+          <h3>Cloud Hosting & Management</h3>
+          <p class="small">Deployments on AWS, Azure, or GCP with monitoring, scaling and cost optimization.</p>
+        </div>
+
+        <div class="card service">
+          <h3>Analytics & Automation SaaS</h3>
+          <p class="small">Web scraping, dashboards, and AI-driven insights delivered as SaaS.</p>
+        </div>
+
+        <div class="card service">
+          <h3>Payment & Subscription Integration</h3>
+          <p class="small">Stripe, Razorpay, PayPal and custom gateway integrations for recurring revenue models.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="why">
+      <div>
+        <h2>Why Partner with Us</h2>
+        <p class="small">We deliver secure, scalable, and cost-effective digital solutions tailored to your needs.</p>
+
+        <div class="features" style="margin-top:14px">
+          <div class="card">
+            <strong>Deep technical expertise</strong>
+            <p class="small">Experienced team in Python, REST APIs, SaaS product development and automation.</p>
+          </div>
+
+          <div class="card">
+            <strong>Security-first approach</strong>
+            <p class="small">Secure-by-design architecture, vulnerability testing and best-practice compliance.</p>
+          </div>
+
+          <div class="card">
+            <strong>End-to-end delivery</strong>
+            <p class="small">From UX and design to development, QA and cloud deployment — a single accountable partner.</p>
+          </div>
+
+          <div class="card">
+            <strong>Agile & cost-effective</strong>
+            <p class="small">Flexible engagement models that suit startups, SMEs and enterprises.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>Typical engagements</h3>
+          <ul>
+            <li>Minimum Viable Product (MVP) builds</li>
+            <li>API monetization & partner integrations</li>
+            <li>Platform migrations to cloud-native stacks</li>
+            <li>End-to-end QA & performance tuning</li>
+          </ul>
+
+          <h3 style="margin-top:14px">Industries</h3>
+          <p class="small">SaaS, Fintech, Marketplaces, Analytics, Media, and more.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" style="padding-top:26px">
+      <h2>Recent Work</h2>
+      <div class="card" style="margin-top:12px">
+        <p class="small">Case studies and client references are available on request. We deliver production-ready systems with observability, backups, and automated release pipelines.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="padding-top:26px">
+      <h2>Get in touch</h2>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:12px">
+        <div class="card contact-form">
+          <form>
+            <label>Name</label>
+            <input type="text" placeholder="Full name" />
+            <label>Email</label>
+            <input type="email" placeholder="your-email@gmail.com" />
+            <label>Project Brief</label>
+            <textarea rows="6" placeholder="Describe your idea, timeline and budget (optional)"></textarea>
+            <!-- <button class="btn" type="button">Send message</button> -->
+            <a href="mailto:nfotekmara@gmail.com">
+            <button class="btn" type="button">Send message</button>
+          </a>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Contact</h3>
+          <p class="small">Email: <strong>infotekmara@gmail.com</strong></p>
+          <p class="small">Location: India (remote-friendly)</p>
+          <h4 style="margin-top:12px">Let's talk</h4>
+          <p class="small">Book a consultation or request a custom proposal. We typically respond within one business day.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 TEKMARA SOLUTIONS | All Rights Reserved</p>
+    <div class="container footer-grid">
+      <div>
+        <strong>TEKMARA SOLUTIONS</strong>
+        <div class="small">Build. Scale. Automate.</div>
+      </div>
+      <div class="small">© 2025 TEKMARA SOLUTIONS. All rights reserved.</div>
+    </div>
   </footer>
+
 </body>
 </html>
